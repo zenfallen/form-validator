@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+    integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <main class="main">
+    <form action="" class="form" id="form">
+      <!-- Group: User -->
+      <div class="form__group" id="user__group">
+        <label for="user" class="form__label">Usuario</label>
+        <div class="form__group-input">
+          <input type="text" class="form__input" name="user" id="user" placeholder="john123">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">El usuario debe tener entre 4 a 16 dígitos y sólo puede contener números, letras y
+          guion bajo.</p>
+      </div>
+      <!-- Group: User -->
+
+      <!-- Group: Name -->
+      <div class="form__group" id="name__group">
+        <label for="name" class="form__label">Nombre</label>
+        <div class="form__group-input">
+          <input type="text" class="form__input" name="name" id="name" placeholder="John Doe">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">El nombre sólo puede contener letras.</p>
+      </div>
+      <!-- Group: Name -->
+
+      <!-- Group: Password -->
+      <div class="form__group" id="pass__group">
+        <label for="pass" class="form__label">Contraseña</label>
+        <div class="form__group-input">
+          <input type="password" class="form__input" name="pass" id="pass">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">La contraseña debe tener de 4 a 12 dígitos.</p>
+      </div>
+      <!-- Group: Password -->
+
+      <!-- Group: Password 2 -->
+      <div class="form__group" id="pass2__group">
+        <label for="pass2" class="form__label">Confirmar Contraseña</label>
+        <div class="form__group-input">
+          <input type="password" class="form__input" name="pass2" id="pass2">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">Las contraseñas no coinciden.</p>
+      </div>
+      <!-- Group: Password 2 -->
+
+      <!-- Group: Email -->
+      <div class="form__group" id="email__group">
+        <label for="email" class="form__label">Correo Electrónico</label>
+        <div class="form__group-input">
+          <input type="email" class="form__input" name="email" id="email" placeholder="example@email.com">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">El correo sólo puede contener letras, números, puntos, guiones y guion bajo.</p>
+      </div>
+      <!-- Group: Email -->
+
+      <!-- Group: Phone -->
+      <div class="form__group" id="phone__group">
+        <label for="phone" class="form__label">Teléfono</label>
+        <div class="form__group-input">
+          <input type="text" class="form__input" name="phone" id="phone">
+          <i class="form__status-validation fas fa-times-circle"></i>
+        </div>
+        <p class="form__input-error">El teléfono sólo puede tener números y un máximo de 14 dígitos.</p>
+      </div>
+      <!-- Group: Phone -->
+
+      <!-- Group: Terms and Conditions -->
+      <div class="form__group form__group-terms" id="terms__group">
+        <label for="terms" class="form__label">
+          <input type="checkbox" class="form__checkbox" name="terms" id="terms">
+          <strong>Acepto los terminos y condiciones.</strong>
+        </label>
+      </div>
+      <!-- Group: Terms and Conditions -->
+
+      <!-- Error Message -->
+      <div class="form__error-message" id="form__error-message">
+        <p><i class="fas fa-exclamation-triangle"><strong> Error:</strong></i> Por favor rellena el formulario
+          correctamente.</p>
+      </div>
+      <!-- Error Message -->
+
+      <!-- Button -->
+      <div class="form__btn-send">
+        <button type="submit" class="form__btn">Enviar</button>
+      </div>
+      <!-- Button -->
+
+      <!-- Success Message -->
+      <div class="form__success-message" id="form__success-message">
+        <p><i class="fas fa-check-circle"><strong> Felicidades:</strong></i> ¡El formulario ha sido enviado
+          exitosamente!
+        </p>
+      </div>
+      <!-- Success Message -->
+    </form>
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

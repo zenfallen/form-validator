@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  background-color: #566185;
+}
+
+.main {
+  max-width: 800px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.form__label {
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.form__group-input {
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  background-color: #fff;
+  border: 3px solid transparent;
+  border-radius: 3px;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: .3s ease all;
+}
+
+.form__input:focus {
+  border-color: #1f4fed;
+  outline: none;
+  box-shadow: 3px 0 30px rgba(0, 0, 0, 0.4);
+}
+
+.form__input-error {
+  font-size: 0.8rem;
+  margin-bottom: 0;
+  display: none;
+}
+
+.form__input-error-active {
+  display: block;
+}
+
+.form__status-validation {
+  right: 10px;
+  bottom: 15px;
+  z-index: 999;
+  font-size: 1rem;
+  opacity: 0;
+  position: absolute;
+}
+
+.form__checkbox {
+  margin-right: 10px;
+}
+
+.form__group-terms,
+.form__error-message,
+.form__group-btn-send,
+.form__success-message {
+  grid-column: span 2;
+}
+
+.form__error-message {
+  height: auto;
+  line-height: 45px;
+  background-color: #f73434;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.form__btn-send {
+  grid-column: span 2;
+}
+
+.form__btn {
+  display: block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: rgb(49, 43, 141);
+  color: #fff;
+  border: transparent;
+  border-radius: 3px;
+  transition: .3s ease all;
+  cursor: pointer;
+  outline: none;
+}
+
+.form__btn:hover {
+  background-color: rgb(33, 27, 122);
+  color: #fff;
+  box-shadow: 3px 0 30px rgba(0, 0, 0, 0.4);
+  transition: .3s ease all;
+}
+
+.form__success-message {
+  height: auto;
+  line-height: 45px;
+  background-color: #72f666;
+  padding: 0 15px;
+  border-radius: 3px;
+  display: none;
+}
+
+.form__error-message p, 
+.form-success-message p {
+  margin: 0;
+}
+
+.form__error-message-active, 
+.form__success-message-active {
+  display: block;
+}
+
+.form__group-incorrect .form__status-validation{
+ color: #c22929;
+ opacity: 1;
+}
+
+.form__group-incorrect .form__label {
+  color: #c22929;
+}
+
+.form__group-incorrect .form__input {
+  border-color: #c22929;
+}
+
+@media screen and (max-width: 576px) {
+  .form {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .form__group {
+    grid-column: 1/4;
+  }
+
+  .form__group-incorrect {
+    grid-column: 1/4;
+  }
+
+  .form__error-message {
+    grid-column: 1/4;
+  }
+
+  .form__btn-send {
+    grid-column: 1/4;
+  }
+
+  .form__success-message {
+    grid-column: 1/4;
+  }
+}
